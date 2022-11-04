@@ -16,5 +16,10 @@ def difference_from_answer(guess, answer):
     print("Too high")
   elif guess < answer:
     print("Too Low")
-  else:
+  elif guess == answer:
     print("Correct")
+  else:
+    print("ERROR")
+
+def make_a_guess(answer):
+  guess = int(input("Make a guess: "))
