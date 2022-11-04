@@ -11,7 +11,7 @@ def generate_random_number(lb, ub):
 
 
 def difference_from_answer(guess, answer):
-  answer = generate_random_number(lower_bound, upper_bound)]
+  answer = generate_random_number(lower_bound, upper_bound)
   if guess > answer:
     print("Too high")
   elif guess < answer:
@@ -21,5 +21,13 @@ def difference_from_answer(guess, answer):
   else:
     print("ERROR")
 
+
 def make_a_guess(answer):
-  guess = int(input("Make a guess: "))
+  try:
+    guess = int(input("Make a guess: "))
+  except:
+    print("Not an Ini")
+  difference_from_answer(guess, answer)
+
+
+make_a_guess(generate_random_number(lower_bound, upper_bound))
